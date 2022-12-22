@@ -84,20 +84,7 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
     privateNetworking: true # include only in private subnet
     subnets:
       - my-private-201-a # 1 AZ is enough for testing
-  - name: pub-201-a-1
-    labels: { role: workers }
-    tags:
-      k8s.io/cluster-autoscaler/enabled: "true"
-      k8s.io/cluster-autoscaler/my-eks-201: "shared"
-    instancesDistribution:
-instanceTypes:
-        - t2.medium
-    desiredCapacity: 1
-    minSize: 0
-    maxSize: 1
-    privateNetworking: true # include only in private subnet
-    subnets:
-      - my-private-201-a # 1 AZ is enough for testing
+  
   - name: pub-201-a-1
     labels: { role: workers }
     tags:
