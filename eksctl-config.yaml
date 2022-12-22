@@ -46,7 +46,7 @@ iam: # Refer: https://eksctl.io/usage/iamserviceaccounts/
       name: efs-csi-controller-sa
       namespace: kube-system
     attachPolicyARNs:
-- arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy
+    - arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy
   - metadata:
       name: efs-csi-controller-sa
       namespace: kube-system
